@@ -8,17 +8,20 @@ export default class TTTController {
         this.jatekosView = new JatekosView(document.querySelector("article"));
         this.statuszElem = document.getElementById("statusz");
 
-        this.view.elemek.forEach(elem => {
-            elem.kattintasCallback = (index) => this.kattintasKezelo(index);
-        });
-
-
         const restartBtn = document.querySelector(".restartBtn");
         restartBtn.addEventListener("click", () => this.ujJatek());
 
-        
+        this.esemenykezelo();
         
         this.statuszElem.textContent = "A játék kezdéséhez add meg a neveket!";
+    }
+
+
+    esemenykezelo(){
+        window.addEventListener("mezokivalaszt", (event)=>{
+            const i = event.detail;
+            this.kattintasKezelo(i);
+        });
     }
 
     kattintasKezelo(index) {

@@ -3,11 +3,11 @@ import TTTElemView from "./TTTElemView.js";
 export default class TTTView{
     constructor(model,szuloElem){
         this.model=model;
-        this.szuloELem=szuloElem;
+        this.szuloElem=szuloElem;
         this.elemek = [];
 
         for (let i = 0; i < 9; i++) {
-            this.elemek.push(new TTTElemView(i, this.szuloELem, (index) => this.esemenykezelo(index)));          
+            this.elemek.push(new TTTElemView(i, this.szuloElem));          
         }
     }
 
@@ -21,11 +21,6 @@ export default class TTTView{
         }
     }
 
-    esemenykezelo(index) {
-        this.model.setAllapot(index);
-        this.megjelenit();
-        if (this.model.getVegevanE() !== "Nincs") {
-            alert(this.model.getVegevanE());
-        }
-    }
+    
+    
 }
