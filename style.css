@@ -100,3 +100,56 @@ h1 {
 }
 
 
+@media (max-width: 600px) {
+    .jatekter {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+        gap: 8px;
+    }
+
+    .tablamezo {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .restartBtn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .jatekosok {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .jatekosok input {
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    .statusz {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .jatekter {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+        gap: 10px;
+    }
+
+    .tablamezo {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+
+    .restartBtn {
+        font-size: 17px;
+        padding: 9px 18px;
+    }
+}
